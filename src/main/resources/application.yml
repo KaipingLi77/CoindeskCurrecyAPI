@@ -1,0 +1,22 @@
+#remote visit
+spring:
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+        web-admin-password: sa
+        trace: true
+      path: /h2-console
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:~/currency
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+server:
+  port: 8080
